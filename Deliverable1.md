@@ -124,9 +124,8 @@ The list below covers everything we need to build, test and prototype the device
 
 ![Evidence](/images/Evidence.jpeg)
 
-## 7. References (citations used in this document)
+## 7. References
 
-- Baballe, M. A. et al. (2021). *Automatic Gas Leakage Monitoring System using MQ-5 Sensor.* Review of Computer Engineering Research, 8(2). (Figure 7 used as the detail-level template.)
 - DryGair — *What are the Ideal Conditions for Greenhouse Tulips?* <https://drygair.com/blog/greenhouse-tulips/>
 - Agriculture Institute — *Growing Tulips: Varieties, Propagation, and Climate Requirements.* <https://agriculture.institute/floriculture-and-landscaping/growing-tulips-varieties-propagation-climate/>
 - Johnny's Seeds — *Tulip Key Growing Information.* <https://www.johnnyseeds.com/growers-library/flowers/tulips/tulip-key-growing-information.html>
