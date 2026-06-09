@@ -104,7 +104,7 @@ The list below covers everything we need to build, test and prototype the device
 
 
 
-![Schematic A]("/images/4A.png")
+![Schematic A](/images/4A.png)
 
 
 ### 4.2 Schematic B — two ESP32-S boards, MQ-5 ⇄ DHT22, direct UART link
