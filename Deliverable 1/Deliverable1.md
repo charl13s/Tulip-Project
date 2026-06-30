@@ -9,7 +9,7 @@
 **Group Members:**
 * 158657	Kuria Shawn James
 * 165948	Murage Charles
-* 166096	Munyiri Timothy
+* 166095	Munyiri Timothy
 * 160761	Muriuki Nelly Nkatha
 * 168669	Riang'a Ravine Kerubo
 * 167022	Billy John Igiraneza
