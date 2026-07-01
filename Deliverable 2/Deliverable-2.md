@@ -12,7 +12,7 @@
 **Group Members:**
 * 158657	Kuria Shawn James
 * 165948	Murage Charles
-* 166096	Munyiri Timothy
+* 166095	Munyiri Timothy
 * 160761	Muriuki Nelly Nkatha
 * 168669	Riang'a Ravine Kerubo
 * 167022	Billy John Igiraneza
@@ -22,9 +22,9 @@
 
 This deliverable builds working prototypes (physical and simulated) for the three architectures specified in Deliverable 1:
 
-- Architecture **(a)** (*single ESP32 + DHT22 + MQ-5 + display*) is delivered as **both** a physical build and a Wokwi simulation.
-- Architecture **(b)** (*two ESP32s communicating via UART*) is delivered as a **simulation only** (Wokwi).
-- Architecture **(c)** (*two ESP32s with DHT22 node gating MQ-5 node via a relay*) is delivered as a **physical build**.
+- Architecture **(a)** (*single ESP32 + DHT22 + MQ-5 + display*) is delivered as both a physical build and a Wokwi simulation.
+- Architecture **(b)** (*two ESP32s communicating via UART*) is delivered as a simulation only (Wokwi).
+- Architecture **(c)** (*two ESP32s with DHT22 node gating MQ-5 node via a relay*) is delivered as a physical build.
 
 ---
 
@@ -41,12 +41,16 @@ This deliverable builds working prototypes (physical and simulated) for the thre
 
 ### 2.2 Simulation B: two ESP32s talking UART2
 
-- **Wokwi link:** <https://wokwi.com/projects/467898043254330369>
-- **Why a single combined project:** Wokwi runs one firmware binary per project. We use the single-project variant to keep the deliverable to one link.
-- **Wire format:**
-  - Node A → Node B: `GAS:nnnn\n`
-  - Node B → Node A: `ENV:T=xx.x;RH=yy.y;GAS=nnnn\n`
-- **Expected output (Serial Monitor):** `[B] T=21.0 RH=65.0 GAS(A)=820`
+Wokwi runs one firmware binary per project, so we published Node 1 and Node 2 as two independent public projects. Each project holds only its own ESP32 and sensor; the physical UART link and shared GND that connect the boards on real hardware are documented in the Deliverable 1 schematic.
+
+- **Wokwi link (Node 1, MQ-5 sender):** <https://wokwi.com/projects/468265550519854081>
+- **Wokwi link (Node 2, DHT22 receiver with LCD):** <https://wokwi.com/projects/468265847344499713>
+
+**Expected output**
+
+- Node 1 Serial Monitor: `[MQ-5 node] TX -> G:1450   ok` (or `** GAS ALERT **` above 2000 mV).
+- Node 2 Serial Monitor: `[DHT22 node] T=21.0 RH=65.0 | RX gas=1450 mV  ok`.
+- Node 2 LCD: T/RH on line 1, `Gas:1450mV ok` (or `ALRT`).
 
 ---
 
@@ -54,7 +58,7 @@ This deliverable builds working prototypes (physical and simulated) for the thre
 
 ### 3.1 Physical (a): single ESP32 + DHT22 + MQ-5 + I²C LCD
 
-A single ESP32-S DevKit V1 reads the DHT22 (GPIO4, 15 kΩ pull-up), the MQ-5 (GPIO34, via a 15 kΩ / 22 kΩ voltage divider), and drives a 16×2 I²C character LCD (GPIO21/22) at address 0x27. Same firmware logic as the Wokwi simulation, with the display library swapped from Adafruit_SSD1306 to `hd44780` for the character LCD.
+A single ESP32-S DevKit V1 reads the DHT22 (GPIO4, 15 kΩ pull-up), the MQ-5 (GPIO34, via a 15 kΩ / 22 kΩ voltage divider), and drives a 16×2 I²C character LCD (GPIO21/22) at address 0x27. Same firmware logic as the Wokwi simulation.
 
 
 - **Photographs:** ![Physical A](images/A-Implementation.jpeg)
