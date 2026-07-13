@@ -27,10 +27,21 @@ This deliverable extends the Deliverable 2 Sim A prototype (ESP32 + DHT22 + MQ-5
 
 **Photographs:**
 
-- **Physical build (top-down view):** ![Physical implementation](images/Implementation.jpeg)
-- **LCD showing live readings:** ![LCD close-up](images/LCD.jpeg)
-- **Full setup with dashboard visible on laptop:** ![Breadboard and dashboard](images/Breadboard-Dashboard.jpeg)
-- **Arduino IDE Serial Monitor beside Grafana dashboard:** ![Split IDE and dashboard](images/Split-IDE-Dashboard.jpeg)
+- **Physical build (top-down view):** 
+
+![Physical implementation](images/Implementation.jpeg)
+
+- **LCD showing live readings:** 
+
+![LCD close-up](images/LCD.jpeg)
+
+
+- **Full setup with dashboard visible on laptop:** 
+
+![Breadboard and dashboard](images/Breadboard-Dashboard.jpeg)
+- **Arduino IDE Serial Monitor beside Grafana dashboard:** 
+
+![Split IDE and dashboard](images/Split-IDE-Dashboard.jpeg)
 
 ---
 
